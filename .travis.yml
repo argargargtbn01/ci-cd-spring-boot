@@ -13,7 +13,7 @@
 
 language: java
 jdk:
-  - openjdk11
+  - openjdk17
 env:
   global:
     - DOCKER_USERNAME=quang1709
@@ -21,7 +21,7 @@ env:
 before_install:
   - sudo chmod +x mvnw
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker pull openjdk:11-jre-slim-sid
+  - docker pull openjdk:17-jdk-slim
 script:
   - ./mvnw clean install
   - ./mvnw deploy jib:build -P deploy-docker
