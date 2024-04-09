@@ -3,8 +3,12 @@ jdk:
   - openjdk11
 services:
   - docker
+env:
+  global:
+    - DOCKER_USERNAME=quang1709
+    - DOCKER_PASSWORD=argargargtbn1
 before_install:
-  - echo "argargargtbn1" | docker login -u "quang1709" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker pull openjdk:11-jre-slim-sid
 
 script:
