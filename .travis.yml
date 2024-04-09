@@ -1,16 +1,3 @@
-#language: java
-#jdk:
-#  - openjdk11
-#services:
-#  - docker
-#
-#before_install:
-#  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-#  - docker pull openjdk:11-jre-slim-sid
-#script:
-#  - ./mvnw clean install
-#  - ./mvnw deploy jib:build -P deploy-docker
-
 language: java
 jdk:
   - openjdk17
@@ -21,7 +8,7 @@ env:
 before_install:
   - sudo chmod +x mvnw
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker pull openjdk:17-jdk-slim
+  - docker pull mediasol/openjdk17-slim-jprofiler
 script:
   - ./mvnw clean install
   - ./mvnw deploy jib:build -P deploy-docker
