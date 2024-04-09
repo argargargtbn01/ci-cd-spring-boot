@@ -55,7 +55,7 @@
 					<version>2.2.0</version>
 					<configuration>
 						<to>
-							<image>registry.hub.docker.com/quang1709/ci-cd-spring-boot</image>
+							<image>quang1709/ci-cd-spring-boot</image>
 							<tags>
 								<tag>${project.version}</tag>
 								<tag>latest</tag>

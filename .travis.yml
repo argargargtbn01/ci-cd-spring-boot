@@ -4,7 +4,7 @@ jdk:
 services:
   - docker
 before_install:
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - echo "argargargtbn1" | docker login -u "quang1709" --password-stdin
   - docker pull openjdk:11-jre-slim-sid
 
 script:
@@ -14,6 +14,4 @@ script:
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 
-env:
-  - DOCKER_PASSWORD=argargargtbn1
-  - DOCKER_USERNAME=quang1709
+
